@@ -88,9 +88,8 @@
 有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象
 最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性
 
-###1.2、构造函数模式创建对象
-
-ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的">
+1.2、构造函数模式创建对象
+ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象之构造函数和原型那点事儿">
 <meta property="og:url" content="http://yoursite.com/2013/10/02/面向对象之构造函数和原型那点事儿/index.html">
@@ -99,20 +98,18 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象
 最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性
 
-###1.2、构造函数模式创建对象
-
-ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的">
+1.2、构造函数模式创建对象
+ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数">
 <meta property="og:image" content="http://yoursite.com/C:\Users\wu\Desktop\img.jpg">
-<meta property="og:updated_time" content="2016-11-02T16:28:55.144Z">
+<meta property="og:updated_time" content="2016-11-02T16:38:07.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象之构造函数和原型那点事儿">
 <meta name="twitter:description" content="1、构造函数1.1、为什么要有构造函数？
 有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象
 最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性
 
-###1.2、构造函数模式创建对象
-
-ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的">
+1.2、构造函数模式创建对象
+ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数">
 <meta name="twitter:image" content="http://yoursite.com/C:\Users\wu\Desktop\img.jpg">
 
 
@@ -303,8 +300,7 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 <li>有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象</li>
 <li>最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性</li>
 </ul>
-<p>###1.2、构造函数模式创建对象</p>
-<blockquote>
+<h3 id="1-2、构造函数模式创建对象"><a href="#1-2、构造函数模式创建对象" class="headerlink" title="1.2、构造函数模式创建对象"></a>1.2、构造函数模式创建对象</h3><blockquote>
 <p>ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数，从而实现自定义对象为它添加属性和方法。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Xman</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line"><span class="keyword">this</span>.name = name;</div><div class="line"><span class="keyword">this</span>.age = age;</div><div class="line"><span class="keyword">this</span>.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Hello,My name is Xman!"</span>);</div><div class="line">&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> man1 = <span class="keyword">new</span> Xman(<span class="string">"金刚狼"</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">var</span> man2 = <span class="keyword">new</span> Xman(<span class="string">"万磁王"</span>,<span class="number">20</span>);</div></pre></td></tr></table></figure>
@@ -320,8 +316,7 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 <li><p>返回执行后的新对象</p>
 </li>
 </ul>
-<p>###1.3、构造函数与普通函数</p>
-<blockquote>
+<h3 id="1-3、构造函数与普通函数"><a href="#1-3、构造函数与普通函数" class="headerlink" title="1.3、构造函数与普通函数"></a>1.3、构造函数与普通函数</h3><blockquote>
 <p>其实在javascript中构造函数和普通函数相比，并没有特殊语法。唯一的区别在于调用它们的方式不同，任何普通函数通过new操作符来调用，它就可以被称为构造函数，反之依然。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//构造函数</span></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Xman(<span class="string">"金刚狼"</span>,<span class="number">19</span>);</div><div class="line">person.sayHello();</div><div class="line"></div><div class="line"><span class="comment">//普通函数</span></div><div class="line"><span class="keyword">var</span> person = Xman(<span class="string">"金刚狼"</span>,<span class="number">19</span>);</div><div class="line">person.sayHello();</div><div class="line"><span class="comment">//window.sayHello();</span></div></pre></td></tr></table></figure>
@@ -332,24 +327,21 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 <blockquote>
 <p>这样做又会出现出现新的问题：具体某个对象调用全局作用域中的函数，会容易造成全局作用域污染，也就不具有封装性了。</p>
 </blockquote>
-<p>##2、原型</p>
-<p>###2.1、原型对象</p>
-<blockquote>
+<h2 id="2、原型"><a href="#2、原型" class="headerlink" title="2、原型"></a>2、原型</h2><h3 id="2-1、原型对象"><a href="#2-1、原型对象" class="headerlink" title="2.1、原型对象"></a>2.1、原型对象</h3><blockquote>
 <p>以上构造函数遇到的问题可以使用它自身原型来解决共享对象的属性和方法。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Xman</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">Xman.prototype.name = <span class="string">"金刚狼"</span>;</div><div class="line">Xman.prototype.age = <span class="string">"56"</span>;</div><div class="line">Xman.prototype.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Hello,My name is Xman!"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Xman();</div><div class="line">person1.sayHello();   <span class="comment">//Hello,My name is Xman!</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Xman();</div><div class="line">person2.sayHello();   <span class="comment">//Hello,My name is Xman!</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>由此可以看出利用构造函数的原型对象为构造函数的实例添加方法和属性，可以节省内存空间的浪费，因为它的原型对象创建出的属性与方法都被其构造函数的实例所共享。</p>
 </blockquote>
-<p>###2.2、关于原型的一些结论和推论<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,number</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.number=number;</div><div class="line">    <span class="keyword">this</span>.learnOOP=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"学习构造函数、原型、继承"</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">"王五"</span>,<span class="number">33</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">var</span> s2=<span class="keyword">new</span> Student(<span class="string">"周星驰"</span>,<span class="number">50</span>,<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> s3=<span class="keyword">new</span> Student(<span class="string">"范冰冰"</span>,<span class="number">38</span>,<span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="comment">//对Student实例化3次，就会分配3个不同的learnOOP方法(指向不同的内存空间)，而这3个方法里面的功能都是相同的，这样就</span></div><div class="line"><span class="comment">//导致了内存的浪费，</span></div><div class="line"><span class="comment">//如何解决这个问题：使用原型对象</span></div><div class="line"><span class="comment">//console.log(Student.prototype);</span></div><div class="line"></div><div class="line">Student.prototype.run=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"我在徒步5KM"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(s1.run);</div><div class="line"><span class="built_in">console</span>.log(s2.run);</div><div class="line"><span class="built_in">console</span>.log(s3.run);</div><div class="line"><span class="built_in">console</span>.log(s1.run===s2.run);<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-2、关于原型的一些结论和推论"><a href="#2-2、关于原型的一些结论和推论" class="headerlink" title="2.2、关于原型的一些结论和推论"></a>2.2、关于原型的一些结论和推论</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,number</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.number=number;</div><div class="line">    <span class="keyword">this</span>.learnOOP=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"学习构造函数、原型、继承"</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">"王五"</span>,<span class="number">33</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">var</span> s2=<span class="keyword">new</span> Student(<span class="string">"周星驰"</span>,<span class="number">50</span>,<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> s3=<span class="keyword">new</span> Student(<span class="string">"范冰冰"</span>,<span class="number">38</span>,<span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="comment">//对Student实例化3次，就会分配3个不同的learnOOP方法(指向不同的内存</span></div><div class="line"><span class="comment">//空间)，而这3个方法里面的功能都是相同的，这样就导致了内存的浪费，</span></div><div class="line"><span class="comment">//如何解决这个问题：使用原型对象</span></div><div class="line"><span class="comment">//console.log(Student.prototype);</span></div><div class="line"></div><div class="line">Student.prototype.run=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"我在徒步5KM"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(s1.run);</div><div class="line"><span class="built_in">console</span>.log(s2.run);</div><div class="line"><span class="built_in">console</span>.log(s3.run);</div><div class="line"><span class="built_in">console</span>.log(s1.run===s2.run);<span class="comment">//true</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>结论1：给构造函数的prototype属性（对象）添加一个方法，这个方法就可以被构造函数的实例所共享</p>
 <p>推论：构造函数的prototype属性(对象)上面的属性、方法都可以被构造函数的实例所共享</p>
 <p>推论2：Student.prototype.constructor===s1.constructor   –&gt;s1查找constructor属性，没有向原型查找</p>
 <p>结论2：构造函数的实例有一个<strong>proto</strong>指向的是构造函数的prototype属性(原型对象)<br>  –&gt;s1.<strong>proto</strong>===Student.prototype</p>
 </blockquote>
-<p>###2.3、构造函数、原型对象、实例三者之间的关系解释</p>
-<ul>
+<h3 id="2-3、构造函数、原型对象、实例三者之间的关系解释"><a href="#2-3、构造函数、原型对象、实例三者之间的关系解释" class="headerlink" title="2.3、构造函数、原型对象、实例三者之间的关系解释"></a>2.3、构造函数、原型对象、实例三者之间的关系解释</h3><ul>
 <li>原型对象是构造函数的prototype属性</li>
 <li>构造函数的实例的<strong>proto</strong>属性指向原型对象</li>
 <li>原型对象有一个constructor属性指向构造函数本身</li>
@@ -358,9 +350,8 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 <p>如下图所示</p>
 </blockquote>
 <p><img src="C:\Users\wu\Desktop\img.jpg" alt="原型图"></p>
-<p>###2.4、原型对象的属性读取与删除<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">American</span>(<span class="params">name,age,color</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div><div class="line"><span class="comment">//设置原型对象的say方法</span></div><div class="line">American.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">//删除原型对象中的say方法</span></div><div class="line"><span class="keyword">delete</span> American.prototype.say;<span class="comment">//只能删除对象所在的内存中的属性，如果p1对象本身不存在a属性，不会报错</span></div><div class="line"></div><div class="line"><span class="comment">//删除了原型对象的constructor属性</span></div><div class="line"><span class="keyword">delete</span> American.prototype.constructor;</div><div class="line"></div><div class="line"><span class="keyword">var</span> jayson = <span class="keyword">new</span> American();</div><div class="line"><span class="built_in">console</span>.log(jayson.constructor);<span class="comment">//jayson.__proto__.__proto__中找到--&gt;Object</span></div></pre></td></tr></table></figure></p>
-<p>###2.5、对象的查找过程</p>
-<blockquote>
+<h3 id="2-4、原型对象的属性读取与删除"><a href="#2-4、原型对象的属性读取与删除" class="headerlink" title="2.4、原型对象的属性读取与删除"></a>2.4、原型对象的属性读取与删除</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">American</span>(<span class="params">name,age,color</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div><div class="line"><span class="comment">//设置原型对象的say方法</span></div><div class="line">American.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">//删除原型对象中的say方法</span></div><div class="line"><span class="keyword">delete</span> American.prototype.say;<span class="comment">//只能删除对象所在的内存中的属性，如果p1对象本身不存在a属性，不会报错</span></div><div class="line"></div><div class="line"><span class="comment">//删除了原型对象的constructor属性</span></div><div class="line"><span class="keyword">delete</span> American.prototype.constructor;</div><div class="line"></div><div class="line"><span class="keyword">var</span> jayson = <span class="keyword">new</span> American();</div><div class="line"><span class="built_in">console</span>.log(jayson.constructor);<span class="comment">//jayson.__proto__.__proto__中找到--&gt;Object</span></div></pre></td></tr></table></figure>
+<h3 id="2-5、对象的查找过程"><a href="#2-5、对象的查找过程" class="headerlink" title="2.5、对象的查找过程"></a>2.5、对象的查找过程</h3><blockquote>
 <p>对象的属性查找(获取对象的属性)？</p>
 <p>1、在当前对象(p1)的内存中查找是否定义该属性</p>
 <p>2、在当前对象的原型对象中查找是否定义该属性,<code>p1.__proto__(Person.prototype)</code></p>
@@ -511,7 +502,7 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、构造函数"><span class="nav-number">1.</span> <span class="nav-text">1、构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、为什么要有构造函数？"><span class="nav-number">1.1.</span> <span class="nav-text">1.1、为什么要有构造函数？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、构造函数"><span class="nav-number">1.</span> <span class="nav-text">1、构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、为什么要有构造函数？"><span class="nav-number">1.1.</span> <span class="nav-text">1.1、为什么要有构造函数？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、构造函数模式创建对象"><span class="nav-number">1.2.</span> <span class="nav-text">1.2、构造函数模式创建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3、构造函数与普通函数"><span class="nav-number">1.3.</span> <span class="nav-text">1.3、构造函数与普通函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、原型"><span class="nav-number">2.</span> <span class="nav-text">2、原型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、原型对象"><span class="nav-number">2.1.</span> <span class="nav-text">2.1、原型对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、关于原型的一些结论和推论"><span class="nav-number">2.2.</span> <span class="nav-text">2.2、关于原型的一些结论和推论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3、构造函数、原型对象、实例三者之间的关系解释"><span class="nav-number">2.3.</span> <span class="nav-text">2.3、构造函数、原型对象、实例三者之间的关系解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4、原型对象的属性读取与删除"><span class="nav-number">2.4.</span> <span class="nav-text">2.4、原型对象的属性读取与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5、对象的查找过程"><span class="nav-number">2.5.</span> <span class="nav-text">2.5、对象的查找过程</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
