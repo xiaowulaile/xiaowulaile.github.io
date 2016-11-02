@@ -100,8 +100,8 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 
 1.2、构造函数模式创建对象
 ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数">
-<meta property="og:image" content="http://yoursite.com/C:\Users\wu\Desktop\img.jpg">
-<meta property="og:updated_time" content="2016-11-02T16:38:07.272Z">
+<meta property="og:image" content="http://yoursite.com/C:\Users\wu\Desktop\blog\source\_posts\img.jpg">
+<meta property="og:updated_time" content="2016-11-02T16:44:39.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象之构造函数和原型那点事儿">
 <meta name="twitter:description" content="1、构造函数1.1、为什么要有构造函数？
@@ -110,7 +110,7 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 
 1.2、构造函数模式创建对象
 ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数">
-<meta name="twitter:image" content="http://yoursite.com/C:\Users\wu\Desktop\img.jpg">
+<meta name="twitter:image" content="http://yoursite.com/C:\Users\wu\Desktop\blog\source\_posts\img.jpg">
 
 
 
@@ -349,8 +349,8 @@ ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Da
 <blockquote>
 <p>如下图所示</p>
 </blockquote>
-<p><img src="C:\Users\wu\Desktop\img.jpg" alt="原型图"></p>
-<h3 id="2-4、原型对象的属性读取与删除"><a href="#2-4、原型对象的属性读取与删除" class="headerlink" title="2.4、原型对象的属性读取与删除"></a>2.4、原型对象的属性读取与删除</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">American</span>(<span class="params">name,age,color</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div><div class="line"><span class="comment">//设置原型对象的say方法</span></div><div class="line">American.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">//删除原型对象中的say方法</span></div><div class="line"><span class="keyword">delete</span> American.prototype.say;<span class="comment">//只能删除对象所在的内存中的属性，如果p1对象本身不存在a属性，不会报错</span></div><div class="line"></div><div class="line"><span class="comment">//删除了原型对象的constructor属性</span></div><div class="line"><span class="keyword">delete</span> American.prototype.constructor;</div><div class="line"></div><div class="line"><span class="keyword">var</span> jayson = <span class="keyword">new</span> American();</div><div class="line"><span class="built_in">console</span>.log(jayson.constructor);<span class="comment">//jayson.__proto__.__proto__中找到--&gt;Object</span></div></pre></td></tr></table></figure>
+<p><img src="C:\Users\wu\Desktop\blog\source\_posts\img.jpg" alt="原型图"></p>
+<h3 id="2-4、原型对象的属性读取与删除"><a href="#2-4、原型对象的属性读取与删除" class="headerlink" title="2.4、原型对象的属性读取与删除"></a>2.4、原型对象的属性读取与删除</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">American</span>(<span class="params">name,age,color</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div><div class="line"><span class="comment">//设置原型对象的say方法</span></div><div class="line">American.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">//删除原型对象中的say方法</span></div><div class="line"><span class="keyword">delete</span> American.prototype.say;</div><div class="line"><span class="comment">//只能删除对象所在的内存中的属性，如果p1对象本身不存在a属性，不会报错</span></div><div class="line"></div><div class="line"><span class="comment">//删除了原型对象的constructor属性</span></div><div class="line"><span class="keyword">delete</span> American.prototype.constructor;</div><div class="line"></div><div class="line"><span class="keyword">var</span> jayson = <span class="keyword">new</span> American();</div><div class="line"><span class="built_in">console</span>.log(jayson.constructor);<span class="comment">//jayson.__proto__.__proto__中找到--&gt;Object</span></div></pre></td></tr></table></figure>
 <h3 id="2-5、对象的查找过程"><a href="#2-5、对象的查找过程" class="headerlink" title="2.5、对象的查找过程"></a>2.5、对象的查找过程</h3><blockquote>
 <p>对象的属性查找(获取对象的属性)？</p>
 <p>1、在当前对象(p1)的内存中查找是否定义该属性</p>
