@@ -86,15 +86,29 @@
 
 
 
-<meta name="description" content="学海无涯，且行且珍惜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WuZG's博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="原型链的概念
+JS由对象组成，一个对象就有它的原型对象(proto)，原型对象也有它的原型对象，一直到原型链的顶端，这样构成了一个具有链条形状的结构，称之为原型链
+
+12345678//1、对象字面量的原型链var o1=&amp;#123; age:10 &amp;#125;;    //new Object()//2、通过构造函数创建的对象原型链function Person(name)&amp;#123;    t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象那点事儿-原型链">
+<meta property="og:url" content="http://yoursite.com/2013/10/04/面向对象那点事儿-原型链/index.html">
 <meta property="og:site_name" content="WuZG's博客">
-<meta property="og:description" content="学海无涯，且行且珍惜">
+<meta property="og:description" content="原型链的概念
+JS由对象组成，一个对象就有它的原型对象(proto)，原型对象也有它的原型对象，一直到原型链的顶端，这样构成了一个具有链条形状的结构，称之为原型链
+
+12345678//1、对象字面量的原型链var o1=&amp;#123; age:10 &amp;#125;;    //new Object()//2、通过构造函数创建的对象原型链function Person(name)&amp;#123;    t">
+<meta property="og:image" content="http://yoursite.com/images/1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/2.jpg">
+<meta property="og:image" content="http://yoursite.com/images/3.jpg">
+<meta property="og:updated_time" content="2016-11-04T17:50:33.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WuZG's博客">
-<meta name="twitter:description" content="学海无涯，且行且珍惜">
+<meta name="twitter:title" content="面向对象那点事儿-原型链">
+<meta name="twitter:description" content="原型链的概念
+JS由对象组成，一个对象就有它的原型对象(proto)，原型对象也有它的原型对象，一直到原型链的顶端，这样构成了一个具有链条形状的结构，称之为原型链
+
+12345678//1、对象字面量的原型链var o1=&amp;#123; age:10 &amp;#125;;    //new Object()//2、通过构造函数创建的对象原型链function Person(name)&amp;#123;    t">
+<meta name="twitter:image" content="http://yoursite.com/images/1.jpg">
 
 
 
@@ -115,10 +129,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2013/10/04/面向对象那点事儿-原型链/"/>
 
 
-  <title> WuZG's博客 </title>
+  <title> 面向对象那点事儿-原型链 | WuZG's博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -139,9 +153,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -251,9 +263,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -273,129 +285,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2013/10/05/面向对象那点事儿-继承/" itemprop="url">
-                  面向对象那点事儿-继承
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2013-10-05T21:43:56+08:00" content="2013-10-05">
-              2013-10-05
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/10/05/面向对象那点事儿-继承/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/05/面向对象那点事儿-继承/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2013/10/05/面向对象那点事儿-继承/" class="leancloud_visitors" data-flag-title="面向对象那点事儿-继承">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="继承的概念"><a href="#继承的概念" class="headerlink" title="继承的概念"></a>继承的概念</h2><blockquote>
-<p>  JS继承：将别人的东西拿来自己用</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">Student.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student();</div><div class="line"></div><div class="line">s1.say();</div><div class="line"><span class="comment">//继承关系：s1继承自原型对象——&gt;s1.__proto__===原型对象</span></div><div class="line"></div><div class="line"><span class="comment">//就像a继承自b——&gt;a.__proto__===b</span></div></pre></td></tr></table></figure>
-<h2 id="继承的六种方式"><a href="#继承的六种方式" class="headerlink" title="继承的六种方式"></a>继承的六种方式</h2><h3 id="扩展原型继承方式"><a href="#扩展原型继承方式" class="headerlink" title="扩展原型继承方式"></a>扩展原型继承方式</h3><blockquote>
-<p>一个构造函数的prototype属性指向默认的原型对象，往默认的原型对象中添加属性、方法就可以为构造函数的实例提供共享的属性和方法</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo1</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">foo1.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">"HELLO 1"</span>);&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> kk1 = <span class="keyword">new</span> foo1();</div><div class="line"><span class="built_in">console</span>.log(kk1.getName());</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2013/10/05/面向对象那点事儿-继承/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/10/04/面向对象那点事儿-原型链/" itemprop="url">
-                  面向对象那点事儿-原型链
-                </a>
+                面向对象那点事儿-原型链
               
             
           </h1>
@@ -451,8 +341,7 @@
       
 
       
-        
-          <h2 id="原型链的概念"><a href="#原型链的概念" class="headerlink" title="原型链的概念"></a>原型链的概念</h2><blockquote>
+        <h2 id="原型链的概念"><a href="#原型链的概念" class="headerlink" title="原型链的概念"></a>原型链的概念</h2><blockquote>
 <p>JS由对象组成，一个对象就有它的原型对象(<strong>proto</strong>)，原型对象也有它的原型对象，一直到原型链的顶端，这样构成了一个具有链条形状的结构，称之为原型链</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//1、对象字面量的原型链</div><div class="line">var o1=&#123; age:10 &#125;;    //new Object()</div><div class="line"></div><div class="line">//2、通过构造函数创建的对象原型链</div><div class="line">function Person(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">&#125;</div><div class="line">var p1=new Person(&quot;威震天&quot;);</div></pre></td></tr></table></figure>
@@ -465,149 +354,87 @@
 </ul>
 <p>内置对象以数组为例，已知数组arr = [1,3,5];,则可以得出<code>arr.__proto__===Array.prototype</code><br>,<code>arr.__proto__.__proto__===Object.prototype</code></p>
 </blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2013/10/04/面向对象那点事儿-原型链/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/10/02/面向对象那点事儿-构造函数和原型/" itemprop="url">
-                  面向对象那点事儿-构造函数和原型
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2013-10-02T23:19:49+08:00" content="2013-10-02">
-              2013-10-02
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/10/02/面向对象那点事儿-构造函数和原型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/02/面向对象那点事儿-构造函数和原型/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2013/10/02/面向对象那点事儿-构造函数和原型/" class="leancloud_visitors" data-flag-title="面向对象那点事儿-构造函数和原型">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><h3 id="为什么要有构造函数？"><a href="#为什么要有构造函数？" class="headerlink" title="为什么要有构造函数？"></a>为什么要有构造函数？</h3><ul>
-<li>有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象</li>
-<li>最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性</li>
-</ul>
-<h3 id="构造函数模式创建对象"><a href="#构造函数模式创建对象" class="headerlink" title="构造函数模式创建对象"></a>构造函数模式创建对象</h3><blockquote>
-<p>ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数，从而实现自定义对象为它添加属性和方法。</p>
+<a id="more"></a>
+<p><img src="/images/1.jpg" alt="内置对象原型图"></p>
+<h3 id="内置对象与对象原型图"><a href="#内置对象与对象原型图" class="headerlink" title="内置对象与对象原型图"></a>内置对象与对象原型图</h3><p><img src="/images/2.jpg" alt="内置对象与对象原型图"></p>
+<h3 id="函数原型图"><a href="#函数原型图" class="headerlink" title="函数原型图"></a>函数原型图</h3><h4 id="函数的创建"><a href="#函数的创建" class="headerlink" title="函数的创建"></a>函数的创建</h4><blockquote>
+<p>任何函数都是通过Function创建出来的（任何函数都是Function的实例）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">function f()&#123;&#125;//new Function()</div></pre></td></tr></table></figure></p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Xman</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">    <span class="keyword">this</span>.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"Hello,My name is Xman!"</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> man1 = <span class="keyword">new</span> Xman(<span class="string">"金刚狼"</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">var</span> man2 = <span class="keyword">new</span> Xman(<span class="string">"万磁王"</span>,<span class="number">20</span>);</div></pre></td></tr></table></figure>
-<p><code>注意：构造函数应该首字母大写，非构造函数首字母小写</code></p>
-<p>此处的Xman实例，必须使用new操作符，此种方式的操作经历了一下步骤</p>
 <ul>
-<li><p>创建一个新对象</p>
+<li><p>创建一个无参无返回值的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var f1=new Function(&quot;var a=1;var b=2;console.log(a+b);&quot;);</div></pre></td></tr></table></figure>
 </li>
-<li><p>将构造函数的作用域赋给新对象，并将this指向了这个新对象</p>
+<li><p>创建一个有一个参数，无返回值的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var f2=new Function(&quot;num&quot;,&quot;console.log(num);&quot;);</div><div class="line">f2(10);</div></pre></td></tr></table></figure>
 </li>
-<li><p>执行代码，并为这个新对象添加属性和方法</p>
+<li><p>创建一个具有3个参数，有返回值的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var f3=new Function(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;return a+b+c; &quot;);</div><div class="line">console.log(f3(1,3,5));</div></pre></td></tr></table></figure>
 </li>
-<li><p>返回执行后的新对象</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2013/10/02/面向对象那点事儿-构造函数和原型/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<li><p>创建一个经典继承的函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var f5=new Function(&quot;o&quot;,&quot;function F()&#123;&#125; &quot; +</div><div class="line">&quot;F.prototype=o;&quot; +</div><div class="line">&quot;return new F();&quot;);</div><div class="line">console.log(f5(&#123;age:10&#125;));</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="一些总结："><a href="#一些总结：" class="headerlink" title="一些总结："></a>一些总结：</h4><blockquote>
+<ul>
+<li><p>1、几乎所有函数都有prototype属性（Function.prototype这个函数上没有）</p>
+</li>
+<li><p>2、所有对象中都有__proto__属性（Object.prototype该属性的值null）</p>
+<p>   ——&gt;几乎所有函数都有prototype__proto__属性</p>
+</li>
+<li><p>3、函数都是Function的实例（函数是通过Function创建出来的对象）</p>
+<p>   ——&gt;自定义函数、Function、Array、RegExp、String、Boolean、Number、Object</p>
+</li>
+<li><p>4、几乎所有函数都是继承自：Function.prototype（除了Function.prototype）</p>
+<p>   ——&gt;函数.__proto__===Function.prototype</p>
+<p>   ——&gt;Object.__proto__===Function.prototype</p>
+<p>   ——&gt;Function.__proto__===Function.prototype</p>
+</li>
+<li><p>5、String.prototype.__proto__===Object.prototype</p>
+<p>   Array.prototype.__proto__===Object.prototype</p>
+<p>   Boolean.prototype.__proto__===Object.prototype</p>
+<p>   Number.prototype.__proto__===Object.prototype</p>
+<p>   RegExp.prototype.__proto__===Object.prototype</p>
+<p>   Function.prototype.__proto__===Object.prototype</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="/images/3.jpg" alt="函数原型图"></p>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat.png" alt="WuZG WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/alipay.jpg" alt="WuZG Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
@@ -615,26 +442,77 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/10/02/面向对象那点事儿-构造函数和原型/" rel="next" title="面向对象那点事儿-构造函数和原型">
+                <i class="fa fa-chevron-left"></i> 面向对象那点事儿-构造函数和原型
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/10/05/面向对象那点事儿-继承/" rel="prev" title="面向对象那点事儿-继承">
+                面向对象那点事儿-继承 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2013/10/04/面向对象那点事儿-原型链/"
+           data-title="面向对象那点事儿-原型链" data-url="http://yoursite.com/2013/10/04/面向对象那点事儿-原型链/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -654,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -754,6 +641,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链的概念"><span class="nav-number">1.</span> <span class="nav-text">原型链的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链图"><span class="nav-number">2.</span> <span class="nav-text">原型链图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内置对象原型图"><span class="nav-number">2.1.</span> <span class="nav-text">内置对象原型图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内置对象与对象原型图"><span class="nav-number">2.2.</span> <span class="nav-text">内置对象与对象原型图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数原型图"><span class="nav-number">2.3.</span> <span class="nav-text">函数原型图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的创建"><span class="nav-number">2.3.1.</span> <span class="nav-text">函数的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些总结："><span class="nav-number">2.3.2.</span> <span class="nav-text">一些总结：</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -857,6 +755,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-04T17:09:20.823Z</updated>
+  <updated>2016-11-04T17:52:20.583Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Js面向对象那点事儿-继承</title>
-    <link href="http://yoursite.com/2013/10/05/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/"/>
-    <id>http://yoursite.com/2013/10/05/面向对象之继承那点事儿/</id>
+    <title>面向对象那点事儿-继承</title>
+    <link href="http://yoursite.com/2013/10/05/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-%E7%BB%A7%E6%89%BF/"/>
+    <id>http://yoursite.com/2013/10/05/面向对象那点事儿-继承/</id>
     <published>2013-10-05T13:43:56.000Z</published>
-    <updated>2016-11-04T17:09:20.823Z</updated>
+    <updated>2016-11-04T17:52:20.583Z</updated>
     
     <content type="html"><![CDATA[<h2 id="继承的概念"><a href="#继承的概念" class="headerlink" title="继承的概念"></a>继承的概念</h2><blockquote>
 <p>  JS继承：将别人的东西拿来自己用</p>
@@ -89,16 +89,14 @@
     </summary>
     
     
-      <category term="Javascript 继承" scheme="http://yoursite.com/tags/Javascript-%E7%BB%A7%E6%89%BF/"/>
-    
   </entry>
   
   <entry>
-    <title>Js面向对象那点事儿-原型链</title>
-    <link href="http://yoursite.com/2013/10/04/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF-%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
-    <id>http://yoursite.com/2013/10/04/面向对象那些事儿-原型链/</id>
+    <title>面向对象那点事儿-原型链</title>
+    <link href="http://yoursite.com/2013/10/04/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    <id>http://yoursite.com/2013/10/04/面向对象那点事儿-原型链/</id>
     <published>2013-10-04T10:34:10.000Z</published>
-    <updated>2016-11-04T17:10:01.207Z</updated>
+    <updated>2016-11-04T17:50:33.097Z</updated>
     
     <content type="html"><![CDATA[<h2 id="原型链的概念"><a href="#原型链的概念" class="headerlink" title="原型链的概念"></a>原型链的概念</h2><blockquote>
 <p>JS由对象组成，一个对象就有它的原型对象(<strong>proto</strong>)，原型对象也有它的原型对象，一直到原型链的顶端，这样构成了一个具有链条形状的结构，称之为原型链</p>
@@ -182,11 +180,11 @@
   </entry>
   
   <entry>
-    <title>Js面向对象那点事儿-构造函数与原型</title>
-    <link href="http://yoursite.com/2013/10/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/"/>
-    <id>http://yoursite.com/2013/10/02/面向对象之构造函数和原型那点事儿/</id>
+    <title>面向对象那点事儿-构造函数和原型</title>
+    <link href="http://yoursite.com/2013/10/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E5%8E%9F%E5%9E%8B/"/>
+    <id>http://yoursite.com/2013/10/02/面向对象那点事儿-构造函数和原型/</id>
     <published>2013-10-02T15:19:49.000Z</published>
-    <updated>2016-11-04T17:07:56.525Z</updated>
+    <updated>2016-11-04T17:48:42.057Z</updated>
     
     <content type="html"><![CDATA[<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><h3 id="为什么要有构造函数？"><a href="#为什么要有构造函数？" class="headerlink" title="为什么要有构造函数？"></a>为什么要有构造函数？</h3><ul>
 <li>有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象</li>

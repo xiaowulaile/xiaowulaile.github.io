@@ -86,15 +86,33 @@
 
 
 
-<meta name="description" content="学海无涯，且行且珍惜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WuZG's博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="构造函数为什么要有构造函数？
+有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象
+最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性
+
+构造函数模式创建对象
+ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数，从而实现自定义对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象那点事儿-构造函数和原型">
+<meta property="og:url" content="http://yoursite.com/2013/10/02/面向对象那点事儿-构造函数和原型/index.html">
 <meta property="og:site_name" content="WuZG's博客">
-<meta property="og:description" content="学海无涯，且行且珍惜">
+<meta property="og:description" content="构造函数为什么要有构造函数？
+有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象
+最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性
+
+构造函数模式创建对象
+ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数，从而实现自定义对象">
+<meta property="og:image" content="http://yoursite.com/images/img.jpg">
+<meta property="og:updated_time" content="2016-11-04T17:48:42.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WuZG's博客">
-<meta name="twitter:description" content="学海无涯，且行且珍惜">
+<meta name="twitter:title" content="面向对象那点事儿-构造函数和原型">
+<meta name="twitter:description" content="构造函数为什么要有构造函数？
+有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象
+最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性
+
+构造函数模式创建对象
+ECMAScript中的构造函数可用来创建特定类型的对象如：Array、Date，Object等的原生构造函数，在运行时会自动加入到当前执行环境，当然，也可创建自定义的构造函数，从而实现自定义对象">
+<meta name="twitter:image" content="http://yoursite.com/images/img.jpg">
 
 
 
@@ -115,10 +133,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2013/10/02/面向对象那点事儿-构造函数和原型/"/>
 
 
-  <title> WuZG's博客 </title>
+  <title> 面向对象那点事儿-构造函数和原型 | WuZG's博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -139,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -251,9 +267,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -273,253 +289,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2013/10/05/面向对象那点事儿-继承/" itemprop="url">
-                  面向对象那点事儿-继承
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2013-10-05T21:43:56+08:00" content="2013-10-05">
-              2013-10-05
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/10/05/面向对象那点事儿-继承/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/05/面向对象那点事儿-继承/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2013/10/05/面向对象那点事儿-继承/" class="leancloud_visitors" data-flag-title="面向对象那点事儿-继承">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="继承的概念"><a href="#继承的概念" class="headerlink" title="继承的概念"></a>继承的概念</h2><blockquote>
-<p>  JS继承：将别人的东西拿来自己用</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">Student.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student();</div><div class="line"></div><div class="line">s1.say();</div><div class="line"><span class="comment">//继承关系：s1继承自原型对象——&gt;s1.__proto__===原型对象</span></div><div class="line"></div><div class="line"><span class="comment">//就像a继承自b——&gt;a.__proto__===b</span></div></pre></td></tr></table></figure>
-<h2 id="继承的六种方式"><a href="#继承的六种方式" class="headerlink" title="继承的六种方式"></a>继承的六种方式</h2><h3 id="扩展原型继承方式"><a href="#扩展原型继承方式" class="headerlink" title="扩展原型继承方式"></a>扩展原型继承方式</h3><blockquote>
-<p>一个构造函数的prototype属性指向默认的原型对象，往默认的原型对象中添加属性、方法就可以为构造函数的实例提供共享的属性和方法</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo1</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">foo1.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">"HELLO 1"</span>);&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> kk1 = <span class="keyword">new</span> foo1();</div><div class="line"><span class="built_in">console</span>.log(kk1.getName());</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2013/10/05/面向对象那点事儿-继承/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/10/04/面向对象那点事儿-原型链/" itemprop="url">
-                  面向对象那点事儿-原型链
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2013-10-04T18:34:10+08:00" content="2013-10-04">
-              2013-10-04
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/10/04/面向对象那点事儿-原型链/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/04/面向对象那点事儿-原型链/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2013/10/04/面向对象那点事儿-原型链/" class="leancloud_visitors" data-flag-title="面向对象那点事儿-原型链">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="原型链的概念"><a href="#原型链的概念" class="headerlink" title="原型链的概念"></a>原型链的概念</h2><blockquote>
-<p>JS由对象组成，一个对象就有它的原型对象(<strong>proto</strong>)，原型对象也有它的原型对象，一直到原型链的顶端，这样构成了一个具有链条形状的结构，称之为原型链</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//1、对象字面量的原型链</div><div class="line">var o1=&#123; age:10 &#125;;    //new Object()</div><div class="line"></div><div class="line">//2、通过构造函数创建的对象原型链</div><div class="line">function Person(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">&#125;</div><div class="line">var p1=new Person(&quot;威震天&quot;);</div></pre></td></tr></table></figure>
-<h2 id="原型链图"><a href="#原型链图" class="headerlink" title="原型链图"></a>原型链图</h2><h3 id="内置对象原型图"><a href="#内置对象原型图" class="headerlink" title="内置对象原型图"></a>内置对象原型图</h3><blockquote>
-<p>结合构造函数、原型对象、实例三者之间的关系</p>
-<ul>
-<li>原型对象是构造函数的prototype属性</li>
-<li>构造函数的实例的<strong>proto</strong>属性指向原型对象</li>
-<li>原型对象有一个constructor属性指向构造函数本身</li>
-</ul>
-<p>内置对象以数组为例，已知数组arr = [1,3,5];,则可以得出<code>arr.__proto__===Array.prototype</code><br>,<code>arr.__proto__.__proto__===Object.prototype</code></p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2013/10/04/面向对象那点事儿-原型链/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/10/02/面向对象那点事儿-构造函数和原型/" itemprop="url">
-                  面向对象那点事儿-构造函数和原型
-                </a>
+                面向对象那点事儿-构造函数和原型
               
             
           </h1>
@@ -575,8 +345,7 @@
       
 
       
-        
-          <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><h3 id="为什么要有构造函数？"><a href="#为什么要有构造函数？" class="headerlink" title="为什么要有构造函数？"></a>为什么要有构造函数？</h3><ul>
+        <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><h3 id="为什么要有构造函数？"><a href="#为什么要有构造函数？" class="headerlink" title="为什么要有构造函数？"></a>为什么要有构造函数？</h3><ul>
 <li>有一些对象，它们都有共同的特征（属性），就用构造函数来创造这一类型的对象</li>
 <li>最直接的好处：一次封装，多次调用，可以省略一些代码，也让代码更加具有可读性</li>
 </ul>
@@ -594,20 +363,102 @@
 <li><p>执行代码，并为这个新对象添加属性和方法</p>
 </li>
 <li><p>返回执行后的新对象</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2013/10/02/面向对象那点事儿-构造函数和原型/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<a id="more"></a>
+<h3 id="构造函数与普通函数"><a href="#构造函数与普通函数" class="headerlink" title="构造函数与普通函数"></a>构造函数与普通函数</h3><blockquote>
+<p>其实在javascript中构造函数和普通函数相比，并没有特殊语法。唯一的区别在于调用它们的方式不同，任何普通函数通过new操作符来调用，它就可以被称为构造函数，反之依然。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//构造函数</span></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Xman(<span class="string">"金刚狼"</span>,<span class="number">19</span>);</div><div class="line">person.sayHello();</div><div class="line"></div><div class="line"><span class="comment">//普通函数</span></div><div class="line"><span class="keyword">var</span> person = Xman(<span class="string">"金刚狼"</span>,<span class="number">19</span>);</div><div class="line">person.sayHello();</div><div class="line"><span class="comment">//window.sayHello();</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>自定义的构造函数虽然实现了隐式创建对象，并且实现了直接将属性、方法赋给this和无return,但是每次创建一次构造函数产生的构造函数方法都会重复创建。当然完全可以把构造函数的方法定义在外面。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Xman</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">    <span class="keyword">this</span>.sayHello = sayHello;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello,My name is Xman!"</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这样做又会出现出现新的问题：具体某个对象调用全局作用域中的函数，会容易造成全局作用域污染，也就不具有封装性了。</p>
+</blockquote>
+<h3 id="构造函数的返回值"><a href="#构造函数的返回值" class="headerlink" title="构造函数的返回值"></a>构造函数的返回值</h3><ul>
+<li><p>构造函数没有返回值，就会利用默认返回值——&gt;Person的实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;&#125;</div><div class="line">var p1=new Person();    //返回Person的实例--&gt;p1</div></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数有一个返回值（返回值是数字）,还是会利用默认的返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function Foo()&#123;</div><div class="line">    return 1;       //返回Person的实例--&gt;p2</div><div class="line">&#125;</div><div class="line">var p2=new Foo();</div></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数有一个返回值（返回值是对象），新的返回值会覆盖默认的返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function Cup()&#123;</div><div class="line">    return &#123; name:&quot;张三&quot;&#125;;</div><div class="line">&#125;</div><div class="line">var p3=new Cup();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>总结：</strong></p>
+<p><strong>1、构造函数没有手动添加返回值，返回构造函数的实例</strong></p>
+<p><strong>2、构造函数返回基本数据类型的值，返回的还是构造函数的实例</strong></p>
+<p><strong>3、构造函数返回对象类型的值，返回就是那个对象</strong></p>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><h3 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h3><blockquote>
+<p>以上构造函数遇到的问题可以使用它自身原型来解决共享对象的属性和方法。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Xman</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">Xman.prototype.name = <span class="string">"金刚狼"</span>;</div><div class="line">Xman.prototype.age = <span class="string">"56"</span>;</div><div class="line">Xman.prototype.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Hello,My name is Xman!"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Xman();</div><div class="line">person1.sayHello();   <span class="comment">//Hello,My name is Xman!</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Xman();</div><div class="line">person2.sayHello();   <span class="comment">//Hello,My name is Xman!</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>由此可以看出利用构造函数的原型对象为构造函数的实例添加方法和属性，可以节省内存空间的浪费，因为它的原型对象创建出的属性与方法都被其构造函数的实例所共享。</p>
+</blockquote>
+<h3 id="关于原型的一些结论和推论"><a href="#关于原型的一些结论和推论" class="headerlink" title="关于原型的一些结论和推论"></a>关于原型的一些结论和推论</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,number</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.number=number;</div><div class="line">    <span class="keyword">this</span>.learnOOP=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"学习构造函数、原型、继承"</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">"风暴女"</span>,<span class="number">33</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">var</span> s2=<span class="keyword">new</span> Student(<span class="string">"瑞文"</span>,<span class="number">20</span>,<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> s3=<span class="keyword">new</span> Student(<span class="string">"斯科特"</span>,<span class="number">48</span>,<span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="comment">//对Student实例化3次，就会分配3个不同的learnOOP方法(指向不同的内存空间)，而这3个方法里面的功能都是相同的，这样就</span></div><div class="line"><span class="comment">//导致了内存的浪费，</span></div><div class="line"><span class="comment">//如何解决这个问题：使用原型对象</span></div><div class="line"><span class="comment">//console.log(Student.prototype);</span></div><div class="line"></div><div class="line">Student.prototype.run=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"I'm running"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(s1.run);</div><div class="line"><span class="built_in">console</span>.log(s2.run);</div><div class="line"><span class="built_in">console</span>.log(s3.run);</div><div class="line"><span class="built_in">console</span>.log(s1.run===s2.run);<span class="comment">//true</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>结论1：给构造函数的prototype属性（对象）添加一个方法，这个方法就可以被构造函数的实例所共享</p>
+<p>推论：构造函数的prototype属性(对象)上面的属性、方法都可以被构造函数的实例所共享</p>
+<p>推论2：Student.prototype.constructor===s1.constructor   –&gt;s1查找constructor属性，没有向原型查找</p>
+<p>结论2：构造函数的实例有一个<strong>proto</strong>指向的是构造函数的prototype属性(原型对象)<br>  –&gt;s1.<strong>proto</strong>===Student.prototype</p>
+</blockquote>
+<h3 id="构造函数、原型对象、实例三者之间的关系解释"><a href="#构造函数、原型对象、实例三者之间的关系解释" class="headerlink" title="构造函数、原型对象、实例三者之间的关系解释"></a>构造函数、原型对象、实例三者之间的关系解释</h3><ul>
+<li>原型对象是构造函数的prototype属性</li>
+<li>构造函数的实例的<strong>proto</strong>属性指向原型对象</li>
+<li>原型对象有一个constructor属性指向构造函数本身</li>
+</ul>
+<blockquote>
+<p>如下图所示</p>
+</blockquote>
+<p><img src="/images/img.jpg" alt="原型图"></p>
+<h3 id="原型对象的属性读取与删除"><a href="#原型对象的属性读取与删除" class="headerlink" title="原型对象的属性读取与删除"></a>原型对象的属性读取与删除</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">American</span>(<span class="params">name,age,color</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div><div class="line"><span class="comment">//设置原型对象的say方法</span></div><div class="line">American.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">//删除原型对象中的say方法</span></div><div class="line"><span class="keyword">delete</span> American.prototype.say;<span class="comment">//只能删除对象所在的内存中的属性，如果p1对象本身不存在a属性，不会报错</span></div><div class="line"></div><div class="line"><span class="comment">//删除了原型对象的constructor属性</span></div><div class="line"><span class="keyword">delete</span> American.prototype.constructor;</div><div class="line"></div><div class="line"><span class="keyword">var</span> jayson = <span class="keyword">new</span> American();</div><div class="line"><span class="built_in">console</span>.log(jayson.constructor);<span class="comment">//jayson.__proto__.__proto__中找到--&gt;Object</span></div></pre></td></tr></table></figure>
+<h3 id="对象的查找过程"><a href="#对象的查找过程" class="headerlink" title="对象的查找过程"></a>对象的查找过程</h3><blockquote>
+<p>对象的属性查找(获取对象的属性)？</p>
+<p>1、在当前对象(p1)的内存中查找是否定义该属性</p>
+<p>2、在当前对象的原型对象中查找是否定义该属性,<code>p1.__proto__(Person.prototype)</code></p>
+<p>3、如果2中没有，就去原型对象的原型对象中去找该属性,<code>p1.__proto__.__proto__......</code></p>
+<p>N、最终找到原型链的顶端（这个对象已经不存在<strong>proto</strong>属性了）–&gt;Object.prototype<br>–&gt;p1.constructor：是在Peron.prototype对象中找到了该属性</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat.png" alt="WuZG WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/alipay.jpg" alt="WuZG Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
@@ -615,26 +466,73 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/10/04/面向对象那点事儿-原型链/" rel="prev" title="面向对象那点事儿-原型链">
+                面向对象那点事儿-原型链 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2013/10/02/面向对象那点事儿-构造函数和原型/"
+           data-title="面向对象那点事儿-构造函数和原型" data-url="http://yoursite.com/2013/10/02/面向对象那点事儿-构造函数和原型/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -654,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -754,6 +661,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数"><span class="nav-number">1.</span> <span class="nav-text">构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要有构造函数？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要有构造函数？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数模式创建对象"><span class="nav-number">1.2.</span> <span class="nav-text">构造函数模式创建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数与普通函数"><span class="nav-number">1.3.</span> <span class="nav-text">构造函数与普通函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数的返回值"><span class="nav-number">1.4.</span> <span class="nav-text">构造函数的返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型"><span class="nav-number">2.</span> <span class="nav-text">原型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原型对象"><span class="nav-number">2.1.</span> <span class="nav-text">原型对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于原型的一些结论和推论"><span class="nav-number">2.2.</span> <span class="nav-text">关于原型的一些结论和推论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数、原型对象、实例三者之间的关系解释"><span class="nav-number">2.3.</span> <span class="nav-text">构造函数、原型对象、实例三者之间的关系解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型对象的属性读取与删除"><span class="nav-number">2.4.</span> <span class="nav-text">原型对象的属性读取与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的查找过程"><span class="nav-number">2.5.</span> <span class="nav-text">对象的查找过程</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -857,6 +775,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
